@@ -45,14 +45,14 @@ var cfg Configuration
 // functions after here
 
 func init() {
-	if _, e := os.Stat("config.json"); os.IsNotExist(e) {
-		os.Create("config.json")
-		ioutil.WriteFile("config.json", configText, os.ModePerm)
+	if _, e := os.Stat("config2.json"); os.IsNotExist(e) {
+		os.Create("config2.json")
+		ioutil.WriteFile("config2.json", configText, os.ModePerm)
 		log.Println("No config file found, creating one. Please configure and restart")
 		return
 	}
-	configFile, _ := os.Open("config.json")
-	configFileContents, e := ioutil.ReadFile("config.json")
+	configFile, _ := os.Open("config2.json")
+	configFileContents, e := ioutil.ReadFile("config2.json")
 	if e != nil {
 		log.Println(e)
 		return
