@@ -165,7 +165,7 @@ func authenticate(s *discordgo.Session, u *discordgo.User) bool {
 			}
 		}
 	} else {
-		log.Println("No role by name of \"Admin\", Things might not go so well :/")
+		log.Println("No role by name of \"Troll Patrol\" or \"The Crew\", Things might not go so well :/")
 		return false
 	}
 	return false
